@@ -1,4 +1,4 @@
-import './globals.css'
+import NavBar from './components/NavBar'
 import type { Metadata } from 'next'
 import { Inter } from 'next/font/google'
 
@@ -16,7 +16,10 @@ export default function RootLayout({
 }) {
   return (
     <html lang="en">
-      <body className={inter.className}>{children}</body>
+      <body style={{margin: 0}}>
+        <NavBar />
+        {children}
+      </body>
     </html>
   )
 }
