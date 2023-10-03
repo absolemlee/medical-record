@@ -15,7 +15,7 @@ import Link from 'next/link'
 
 const style = {
   tab: {
-    textDecoration: 'none', 
+    textDecoration: 'none',
     color: 'white',
     margin: '0 30px'
   },
@@ -28,9 +28,11 @@ const NavBar = () => {
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Box sx={{ flexGrow: 1, display: 'flex' }}>
-              <Typography variant="h6" component="div" sx={{ flexGrow: 0 }}>
-                Medical Record
-              </Typography>
+              <Link href="/" style={style.tab}>
+                <Typography variant="h6" component="div" sx={{ flexGrow: 0 }}>
+                  Medical Record
+                </Typography>
+              </Link>
               <Box sx={{ flexGrow: 1, display: 'flex', ml: 10 }}>
                 <Link href="/" style={style.tab}>
                   <Button variant="text" sx={{ color: 'white' }}>
@@ -51,12 +53,16 @@ const NavBar = () => {
             </Box>
 
             <Box>
-              <Button variant="text" sx={{ color: 'white', mr: 4 }}>
-                Login
-              </Button>
-              <Button variant="contained" style={{ backgroundColor: 'white', color: '#1976d2' }}>
-                Sign Up
-              </Button>
+              <Link href="/login">
+                <Button variant="text" sx={{ color: 'white', mr: 4 }}>
+                  Login
+                </Button>
+              </Link>
+              <Link href="/signup">
+                <Button variant="contained" style={{ backgroundColor: 'white', color: '#1976d2' }}>
+                  Sign Up
+                </Button>
+              </Link>
             </Box>
           </Toolbar>
         </Container>
