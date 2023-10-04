@@ -1,26 +1,24 @@
 'use client'
 import React from 'react'
 import { useRouter } from 'next/navigation'
-import { Container, Box, Typography, Button } from '@mui/material'
+import { Box, Container, Button, Typography } from '@mui/material'
 import TextField from '@mui/material/TextField'
-import styles from '../reset-password/reset-password.module.css'
-
 import ArrowBackIcon from '@mui/icons-material/ArrowBack';
 
-const ResetPassword = () => {
-  // Optional: toggle visibility in password field
-  const router = useRouter()
+import styles from '../create-account/create-account.module.css'
 
+const SignUpForm = () => {
+  const router = useRouter()
   return (
     <Container style={{ padding: '0 350px' }}>
       <Box sx={{ display: 'flex', alignItems: 'flex-start' }}>
-        <ArrowBackIcon 
+        <ArrowBackIcon
           className={styles.backButton}
-          fontSize="large" 
-          onClick={() => router.push('/login')} 
+          fontSize="large"
+          onClick={() => router.push('/login')}
         />
         <Typography variant="h5" sx={{ mb: 4, ml: 1 }}>
-          Reset Password
+          Create Account
         </Typography>
       </Box>
       <Box
@@ -52,7 +50,7 @@ const ResetPassword = () => {
         </Typography>
         <Button variant="contained" sx={{ margin: "30px 100px 20px" }}>
           <Typography variant="body2">
-            Continue
+            Create Account
           </Typography>
         </Button>
       </Box>
@@ -60,4 +58,4 @@ const ResetPassword = () => {
   )
 }
 
-export default ResetPassword
+export default SignUpForm

@@ -58,7 +58,7 @@ const NavBar = () => {
                   Login
                 </Button>
               </Link>
-              <Link href="/signup">
+              <Link href="/create-account">
                 <Button variant="contained" style={{ backgroundColor: 'white', color: '#1976d2' }}>
                   Sign Up
                 </Button>
