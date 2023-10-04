@@ -1,4 +1,4 @@
-name: Animal Farm NodeJS CI
+name: NodeJS CI
 on:
   push:
     branches:
