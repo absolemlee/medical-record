@@ -23,7 +23,7 @@ const LoginForm = () => {
           required
           id="outlined-required"
           label="Email"
-          placeholder='Your email'
+          placeholder='Enter your email'
           sx={{ mb: 2.5 }}
           size="small"
         />
@@ -31,7 +31,8 @@ const LoginForm = () => {
           required
           id="outlined-required"
           label="Password"
-          placeholder='Your password'
+          type="password"
+          placeholder='Set your password'
           sx={{ marginBottom: '10px' }}
           size="small"
         />
@@ -49,13 +50,13 @@ const LoginForm = () => {
       </Box>
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Typography variant="body2">
-          <Link href="/" className={styles.loginLink}>
+          <Link href="/reset-password" className={styles.loginLink}>
             Forgot Password?
           </Link>
         </Typography>
         <Typography variant="body2" sx={{ color: 'gray'}}>
           Need an email account?
-          <Link href="/" className={styles.loginLink} style={{marginLeft: '5px'}}>
+          <Link href="/create-account" className={styles.loginLink} style={{marginLeft: '5px'}}>
             Create account
           </Link>
         </Typography>
@@ -64,5 +65,5 @@ const LoginForm = () => {
 
   )
 }
-
+       
 export default LoginForm
