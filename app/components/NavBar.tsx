@@ -8,7 +8,7 @@ import {
   Typography,
   IconButton,
   MenuItem,
-  Button
+  Button,
 }
   from '@mui/material'
 import Link from 'next/link'
@@ -16,36 +16,35 @@ import Link from 'next/link'
 const style = {
   tab: {
     textDecoration: 'none',
-    color: 'white',
-    margin: '0 30px'
+    margin: '0 30px',
   },
 }
 
 const NavBar = () => {
   return (
     <Box sx={{ flexGrow: 1 }}>
-      <AppBar position="static">
+      <AppBar position="static" sx={{ background: 'white' }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
             <Box sx={{ flexGrow: 1, display: 'flex' }}>
               <Link href="/" style={style.tab}>
-                <Typography variant="h6" component="div" sx={{ flexGrow: 0 }}>
+                <Typography variant="h5" component="div" sx={{ flexGrow: 0, color: 'black' }}>
                   Medical Record
                 </Typography>
               </Link>
               <Box sx={{ flexGrow: 1, display: 'flex', ml: 10 }}>
-                <Link href="/" style={style.tab}>
-                  <Button variant="text" sx={{ color: 'white' }}>
+                <Link href="/" style={style.tab} >
+                  <Button sx={{ fontSize: '15px', color: 'black', textTransform: 'capitalize' }}>
                     Home
                   </Button>
                 </Link>
                 <Link href="/about" style={style.tab}>
-                  <Button variant="text" sx={{ color: 'white' }}>
+                  <Button sx={{ fontSize: '15px', color: 'black', textTransform: 'capitalize' }}>
                     About
                   </Button>
                 </Link>
                 <Link href="/contact" style={style.tab}>
-                  <Button variant="text" sx={{ color: 'white' }}>
+                  <Button sx={{ fontSize: '15px', color: 'black', textTransform: 'capitalize' }}>
                     Contact
                   </Button>
                 </Link>
@@ -54,12 +53,12 @@ const NavBar = () => {
 
             <Box>
               <Link href="/login">
-                <Button variant="text" sx={{ color: 'white', mr: 4 }}>
+                <Button sx={{ fontSize: '15px', color: 'black', textTransform: 'capitalize', mr: 4 }}>
                   Login
                 </Button>
               </Link>
               <Link href="/create-account">
-                <Button variant="contained" style={{ backgroundColor: 'white', color: '#1976d2' }}>
+                <Button sx={{ fontSize: '15px', color: 'black', textTransform: 'capitalize'}}>
                   Sign Up
                 </Button>
               </Link>

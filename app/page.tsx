@@ -14,7 +14,7 @@ import {
 export default function Home() {
   return (
     <Container>
-      <Box sx={{display: 'flex', justifyContent: 'center', alignItems: 'center',flexDirection: 'column'}}>
+      <Box sx={{mt: 5, display: 'flex', justifyContent: 'center', alignItems: 'center',flexDirection: 'column'}}>
         <Typography variant="h2">
           Landing Page
         </Typography>

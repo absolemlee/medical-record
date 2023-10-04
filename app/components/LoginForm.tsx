@@ -43,7 +43,7 @@ const LoginForm = () => {
           />
         </FormGroup>
         <Button variant="contained" sx={{ margin: "30px 100px 20px" }}>
-          <Typography variant="body2">
+          <Typography variant="body1" sx={{textTransform: 'capitalize'}}>
             Sign in
           </Typography>
         </Button>

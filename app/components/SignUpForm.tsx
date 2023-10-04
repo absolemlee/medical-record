@@ -49,7 +49,7 @@ const SignUpForm = () => {
           including at least 8 characters
         </Typography>
         <Button variant="contained" sx={{ margin: "30px 100px 20px" }}>
-          <Typography variant="body2">
+          <Typography variant="body1" sx={{textTransform: 'capitalize'}}>
             Create Account
           </Typography>
         </Button>
