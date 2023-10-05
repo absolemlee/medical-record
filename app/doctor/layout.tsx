@@ -56,8 +56,6 @@ export default function DashboardLayout({
   return (
     <Box sx={{display: 'flex'}}>
       <SideBar items={items} />
-      {/* <nav></nav> */}
-
       {children}
     </Box>
   )
