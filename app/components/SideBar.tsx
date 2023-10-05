@@ -20,15 +20,12 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import SearchField from './SearchField';
+import Avatar from '@mui/material/Avatar'
+import Select from '@mui/material/Select'
+import MenuItem from '@mui/material/MenuItem'
+import FormControl from '@mui/material/FormControl'
 
-import Avatar from '@mui/material/Avatar';
-import Select from '@mui/material/Select';
-import FormControl from '@mui/material/FormControl';
-import InputLabel from '@mui/material/InputLabel';
 import SearchIcon from '@mui/icons-material/Search'
-import InputAdornment from '@mui/material/InputAdornment';
-import TextField from '@mui/material/TextField';
-import MenuItem from '@mui/material/MenuItem';
 
 const drawerWidth = 240
 
@@ -38,53 +35,38 @@ const SideBar = ({ items }: { items: any }) => {
     <Box sx={{ display: 'flex' }}>
       <AppBar
         position="fixed"
-        sx={{ width: `calc(100% - 240px)`, ml: `240px`, background: 'white' }}
+        sx={{ width: 'calc(100% - 240px)', ml: '240px', background: 'white' }}
       >
         <Toolbar sx={{ display: 'flex', justifyContent: 'space-between' }}>
           <Typography variant="h5" noWrap component="div" sx={{ color: 'black', fontWeight: '700' }}>
             Dashboard
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-            <Box component="form" sx={{ mr: 2 }}>
-              <TextField
-                size="small"
-                placeholder="Search"
-                id="outlined-start-adornment"
-                sx={{ m: 1, width: '35ch' }}
-                InputProps={{
-                  startAdornment:
-                    <InputAdornment position="start">
-                      <SearchIcon />
-                    </InputAdornment>,
-                }}
-              />
-            </Box>
+            <SearchField />
             <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <Avatar
-                src="/broken-image.jpg"
-                sx={{ width: 24, height: 24, mr: 1 }}
-              />
-              <Box sx={{ minWidth: 120 }}>
-                <FormControl fullWidth size="small">
+              <FormControl>
+                <Avatar
+                  src="/broken-image.jpg"
+                  sx={{ width: 24, height: 24, mr: 1 }}
+                >
                   <Select
                     labelId="demo-simple-select-label"
                     id="demo-simple-select"
+                    // value={age}
+                    // onChange={handleChange}
                     displayEmpty
-                  // value={age}
-                  // onChange={handleChange}
+                    inputProps={{ IconComponent: "" }}
                   >
-                    <MenuItem disabled value="">
-                      <em>Placeholder</em>
-                    </MenuItem>
                     <MenuItem value={10}>Dashboard</MenuItem>
                     <MenuItem value={20}>My Account</MenuItem>
                     <MenuItem value={30}>Sign Out</MenuItem>
                   </Select>
-                </FormControl>
-              </Box>
-              {/* <SearchField /> */}
+                </Avatar>
+              </FormControl>
+
             </Box>
           </Box>
+
         </Toolbar>
       </AppBar>
       <Drawer
