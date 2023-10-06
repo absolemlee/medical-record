@@ -1,3 +1,96 @@
+# Medical Record
+
+## Table of Contents
+1. [Overview](#Overview)
+2. [Product Spec](#Product-Spec)
+3. [Wireframes](#Wireframes)
+4. [Schema](#Schema)
+5. [Walkthrough](#Walkthrough)
+
+## Overview
+### Description
+Medical Record web application aids healthcare providers in providing safer and more effective service to their patients. By allowing them to view up-to-date patients' documentation and share them to other involved parties such as healthcare insurance companies, this app aim to create a seamless communication experience between the providers, the providerd, and the involved third parties
+
+### App Evaluation
+- **Category**: Healthcare, Medical
+- **Story**: Creates an intermediary that maximizes efficiency in providing healthcare services to patients
+
+## Product Spec
+
+### 1. User Stories (Required and Optional)
+
+**Required Must-have Stories**
+
+* [ ] As a doctor, I can
+  * [ ] Log into my account
+  * [ ] View patients
+  * [ ] Upload patients' medical records
+
+
+**Optional Nice-to-have Stories**
+
+* [ ] Undecided
+
+
+
+### 2. Navigation
+
+**Tab Navigation** 
+
+* Home
+* Contact
+* Login
+* Signup
+
+**Flow Navigation** 
+
+* Login
+   => Dashboard
+   => Account 
+* Dashboard
+   => Menu items
+   => Search  
+* Account 
+   => Profile
+   => Dashboard
+   => Logout
+
+## Wireframes
+empty for now
+
+## Schema 
+### Models
+#### User
+ | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   | userId      | String   | user id  |
+   |          |      |  |
+   |      |    |  |
+   
+#### Record
+ | Property      | Type     | Description |
+   | ------------- | -------- | ------------|
+   |       |    |   |
+   |          |      |   |
+   |      |   |  |
+   |          |      |   |
+   |      |     |  |
+   |      |    |   |
+
+   
+   
+### Networking
+#### List of network requests by screen
+
+  - Blank for now
+    
+#### [OPTIONAL:] Existing API Endpoints
+##### Spotify API
+-  Blank for now
+
+   
+
+------------------------------------------------
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
 ## Getting Started
