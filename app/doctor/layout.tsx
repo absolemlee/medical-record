@@ -32,7 +32,7 @@ const items = [
     url: '/doctor/patients'
   },
   {
-    name: 'Create Profile',
+    name: 'Create Record',
     icon: <NoteAddRoundedIcon />,
     url: '/doctor/create-profile'
   },

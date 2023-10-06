@@ -1,15 +1,11 @@
 import React from 'react'
 import {
   AppBar,
-  Container,
   Toolbar,
   Box,
-  Menu,
   Typography,
   IconButton,
-  // MenuItem,
   Button,
-  // TextField,
 }
   from '@mui/material'
 import Drawer from '@mui/material/Drawer';
@@ -20,12 +16,8 @@ import ListItemButton from '@mui/material/ListItemButton';
 import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import SearchField from './SearchField';
-import Avatar from '@mui/material/Avatar'
-import Select from '@mui/material/Select'
-import MenuItem from '@mui/material/MenuItem'
-import FormControl from '@mui/material/FormControl'
 
-import AssignmentIcon from '@mui/icons-material/Assignment';
+import Logout from '@mui/icons-material/Logout';
 
 const drawerWidth = 240
 
@@ -76,6 +68,16 @@ const SideBar = ({ items }: { items: any }) => {
             </ListItem>
           ))}
         </List>
+        <Divider sx={{mt: 20}} />
+        <Box>
+          <ListItemButton>
+            <ListItemIcon>
+              <Logout />
+            </ListItemIcon>
+            <ListItemText primary="Logout" />
+          </ListItemButton>
+        </Box>
+
       </Drawer>
     </Box>
   )
