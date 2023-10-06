@@ -5,7 +5,6 @@
 2. [Product Spec](#Product-Spec)
 3. [Wireframes](#Wireframes)
 4. [Schema](#Schema)
-5. [Walkthrough](#Walkthrough)
 
 ## Overview
 ### Description
