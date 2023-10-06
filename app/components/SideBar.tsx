@@ -25,7 +25,7 @@ import Select from '@mui/material/Select'
 import MenuItem from '@mui/material/MenuItem'
 import FormControl from '@mui/material/FormControl'
 
-import SearchIcon from '@mui/icons-material/Search'
+import AssignmentIcon from '@mui/icons-material/Assignment';
 
 const drawerWidth = 240
 
@@ -43,30 +43,7 @@ const SideBar = ({ items }: { items: any }) => {
           </Typography>
           <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
             <SearchField />
-            <Box sx={{ display: 'flex', alignItems: 'center' }}>
-              <FormControl>
-                <Avatar
-                  src="/broken-image.jpg"
-                  sx={{ width: 24, height: 24, mr: 1 }}
-                >
-                  <Select
-                    labelId="demo-simple-select-label"
-                    id="demo-simple-select"
-                    // value={age}
-                    // onChange={handleChange}
-                    displayEmpty
-                    inputProps={{ IconComponent: "" }}
-                  >
-                    <MenuItem value={10}>Dashboard</MenuItem>
-                    <MenuItem value={20}>My Account</MenuItem>
-                    <MenuItem value={30}>Sign Out</MenuItem>
-                  </Select>
-                </Avatar>
-              </FormControl>
-
-            </Box>
           </Box>
-
         </Toolbar>
       </AppBar>
       <Drawer
