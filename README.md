@@ -3,8 +3,9 @@
 ## Table of Contents
 1. [Overview](#Overview)
 2. [Product Spec](#Product-Spec)
-3. [Wireframes](#Wireframes)
-4. [Schema](#Schema)
+3. [Tech Stack](#Tech-Stack)
+4. [Wireframes](#Wireframes)
+5. [Schema](#Schema)
 
 ## Overview
 ### Description
@@ -53,6 +54,9 @@ Medical Record web application aids healthcare providers in providing safer and 
    => Profile
    => Dashboard
    => Logout
+
+## Tech Stack
+empty for now 
 
 ## Wireframes
 empty for now
