@@ -1,8 +1,8 @@
 .loginLink {
   text-decoration: none;
-  color: #1976d2;
+  color: #3f51b5;
 }
 
 .loginLink:hover {
-  color: hsl(206, 76%, 64%);
+  color: #2c387e;
 }

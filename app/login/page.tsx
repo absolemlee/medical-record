@@ -27,7 +27,7 @@ const Login = () => {
         p: 5
       }}>
       <Box sx={{ m: '30px 50px 30px' }}>
-        <Typography variant="h3">
+        <Typography variant="h3" sx={{color: '#2c387e'}}>
           Sign In
         </Typography>
       </Box>
