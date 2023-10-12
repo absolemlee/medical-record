@@ -13,15 +13,15 @@ import {
 
 export default function Home() {
   return (
-    <Container>
-      <Box sx={{mt: 5, display: 'flex', justifyContent: 'center', alignItems: 'center',flexDirection: 'column'}}>
-        <Typography variant="h2">
-          Landing Page
-        </Typography>
-        <Typography variant="h5">
-          This page will be left blank for now
-        </Typography>
-      </Box>
-    </Container>
+      <Container>
+        <Box sx={{ mt: 5, display: 'flex', justifyContent: 'center', alignItems: 'center', flexDirection: 'column' }}>
+          <Typography variant="h2">
+            Landing Page
+          </Typography>
+          <Typography variant="h5">
+            This page will be left blank for now
+          </Typography>
+        </Box>
+      </Container>
   )
 }
