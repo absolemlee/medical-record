@@ -1,4 +1,4 @@
-'use client'
+// 'use client'
 import React from 'react'
 import {
   AppBar,
@@ -13,7 +13,7 @@ import {
 }
   from '@mui/material'
 import Link from 'next/link'
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+// import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const style = {
   tab: {
@@ -22,19 +22,19 @@ const style = {
   },
 }
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#3f51b5',
-      light: '#6573c3',
-      dark: '#2c387e'
-    }
-  }
-})
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: '#3f51b5',
+//       light: '#6573c3',
+//       dark: '#2c387e'
+//     }
+//   }
+// })
 
 const NavBar = () => {
   return (
-    <ThemeProvider theme={theme}>
+    // <ThemeProvider theme={theme}>
       <Box sx={{ flexGrow: 1 }}>
         <AppBar position="static" sx={{ background: 'white' }}>
           <Container maxWidth="xl">
@@ -80,7 +80,7 @@ const NavBar = () => {
           </Container>
         </AppBar>
       </Box>
-    </ThemeProvider>
+    // </ThemeProvider>
 
   )
 }

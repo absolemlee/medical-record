@@ -40,7 +40,7 @@ const DoctorDashboard = () => {
           </Typography>
         </Box>
 
-        <Box sx={{ flexGrow: 1 }}>
+        {/* <Box sx={{ flexGrow: 1 }}>
           <Paper elevation={3}>
             <Typography>Patients dummy line chart</Typography>
             <LineChart
@@ -54,7 +54,7 @@ const DoctorDashboard = () => {
               height={300}
             />
           </Paper>
-        </Box>
+        </Box> */}
 
       </Box>
     </Box>

@@ -21,6 +21,7 @@ import SpaceDashboardIcon from '@mui/icons-material/SpaceDashboard';
 import Logout from '@mui/icons-material/Logout';
 import Settings from '@mui/icons-material/Settings';
 
+
 const SearchField = () => {
   const [anchorEl, setAnchorEl] = useState<null | HTMLElement>(null)
   const open = Boolean(anchorEl)
@@ -34,8 +35,11 @@ const SearchField = () => {
     setAnchorEl(null);
   };
 
+
+
+
   return (
-    <Box sx={{display: 'flex', flexDirection: 'row', alignItems: 'center'}}>
+    <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
       <Box component="form">
         <TextField
           size="small"
@@ -53,6 +57,7 @@ const SearchField = () => {
       <Box>
         <Tooltip title="Account settings">
           <IconButton
+            color="primary"
             onClick={handleClick}
             size="small"
             sx={{ ml: 2 }}
@@ -128,6 +133,7 @@ const SearchField = () => {
         </MenuItem>
       </Menu>
     </Box>
+
   )
 }
 

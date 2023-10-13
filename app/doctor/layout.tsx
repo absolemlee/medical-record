@@ -1,3 +1,4 @@
+
 import React from 'react'
 import {
   AppBar,
@@ -19,6 +20,8 @@ import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded'
 import AnalyticsRoundedIcon from '@mui/icons-material/AnalyticsRounded'
 
 import SideBar from '../components/SideBar'
+
+// import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const items = [
   {
@@ -48,15 +51,28 @@ const items = [
   }
 ]
 
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: '#3f51b5',
+//       light: '#6573c3',
+//       dark: '#2c387e'
+//     }
+//   }
+// })
+
 export default function DashboardLayout({
   children,
 }: {
   children: React.ReactNode
 }) {
   return (
-    <Box sx={{display: 'flex'}}>
-      <SideBar items={items} />
-      {children}
-    </Box>
+    // <ThemeProvider theme={theme}>
+      <Box sx={{ display: 'flex' }}>
+        <SideBar items={items} />
+        {children}
+      </Box>
+    // </ThemeProvider>
+
   )
 }

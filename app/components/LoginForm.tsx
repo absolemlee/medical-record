@@ -11,21 +11,21 @@ import Button from '@mui/material/Button'
 
 import Link from 'next/link'
 
-import { createTheme, ThemeProvider } from '@mui/material/styles';
+// import { createTheme, ThemeProvider } from '@mui/material/styles';
 
-const theme = createTheme({
-  palette: {
-    primary: {
-      main: '#3f51b5',
-      light: '#6573c3',
-      dark: '#2c387e'
-    }
-  }
-})
+// const theme = createTheme({
+//   palette: {
+//     primary: {
+//       main: '#3f51b5',
+//       light: '#6573c3',
+//       dark: '#2c387e'
+//     }
+//   }
+// })
 
 const LoginForm = () => {
   return (
-    <ThemeProvider theme={theme}>
+    // <ThemeProvider theme={theme}>
       <Container style={{ padding: '0 350px' }}>
         <Box
           component="form"
@@ -76,7 +76,7 @@ const LoginForm = () => {
           </Typography>
         </Box>
       </Container>
-    </ThemeProvider>
+    // </ThemeProvider>
   )
 }
 
