@@ -35,9 +35,6 @@ const SearchField = () => {
     setAnchorEl(null);
   };
 
-
-
-
   return (
     <Box sx={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
       <Box component="form">

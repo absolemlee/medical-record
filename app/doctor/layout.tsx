@@ -18,10 +18,11 @@ import PeopleAltRoundedIcon from '@mui/icons-material/PeopleAltRounded'
 import NoteAddRoundedIcon from '@mui/icons-material/NoteAddRounded'
 import CalendarMonthRoundedIcon from '@mui/icons-material/CalendarMonthRounded'
 import AnalyticsRoundedIcon from '@mui/icons-material/AnalyticsRounded'
+import Settings from '@mui/icons-material/Settings';
+import LogoutRoundedIcon from '@mui/icons-material/LogoutRounded';
 
 import SideBar from '../components/SideBar'
 
-// import { createTheme, ThemeProvider } from '@mui/material/styles';
 
 const items = [
   {
@@ -51,15 +52,18 @@ const items = [
   }
 ]
 
-// const theme = createTheme({
-//   palette: {
-//     primary: {
-//       main: '#3f51b5',
-//       light: '#6573c3',
-//       dark: '#2c387e'
-//     }
-//   }
-// })
+const belowItems = [
+  {
+    name: 'Settings',
+    icon: <Settings />,
+    url: '/doctor/settings'
+  },
+  {
+    name: 'Log out',
+    icon: <LogoutRoundedIcon />,
+    url: '/doctor/logout'
+  },
+]
 
 export default function DashboardLayout({
   children,
@@ -67,12 +71,9 @@ export default function DashboardLayout({
   children: React.ReactNode
 }) {
   return (
-    // <ThemeProvider theme={theme}>
-      <Box sx={{ display: 'flex' }}>
-        <SideBar items={items} />
-        {children}
-      </Box>
-    // </ThemeProvider>
-
+    <Box sx={{ display: 'flex' }}>
+      <SideBar items={items} belowItems={belowItems}/>
+      {children}
+    </Box>
   )
 }

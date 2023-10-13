@@ -1,4 +1,5 @@
 import { createTheme } from '@mui/material/styles';
+import { grey } from '@mui/material/colors';
 
 // const roboto = Roboto({
 //   weight: ['300', '400', '500', '700'],
@@ -27,11 +28,6 @@ import { createTheme } from '@mui/material/styles';
 // });
 
 const theme = createTheme({
-  // palette: {
-  //   mode: 'dark',
-  //   primary: { main: 'rgb(102, 157, 246)' },
-  //   background: { paper: 'rgb(5, 30, 52)' },
-  // },
   palette: {
     primary: {
       main: '#3f51b5',
@@ -40,47 +36,31 @@ const theme = createTheme({
     }
   },
   components: {
-    // MuiListItem: {
-    //   styleOverrides: {
-    //     root: {
-    //       "&$selected": {
-    //         backgroundColor: "red",
-    //         "&:hover": {
-    //           backgroundColor: "orange",
-    //         },
-    //       },
-    //     },
-    //     button: {
-    //       "&:hover": {
-    //         backgroundColor: "yellow",
-    //       },
-    //     }
-    //   }
-    // }
-    MuiListItemButton: {
-      // defaultProps: {
-      //   disableTouchRipple: true,
-      // },
+    MuiListItem: {
       styleOverrides: {
         root: {
           "&:hover": {
-            backgroundColor: "#6573c3",
-            color: 'white'
+            backgroundColor: '#fafafa',
+            color: '#3f51b5',
           },
-        }
+          ".MuiTypography-root": {
+            fontWeight: '500',
+            color: '#64748B'
+          },
+          ".MuiListItemIcon-root": {
+            color: '#64748B'
+          },
+          "&:hover .MuiTypography-root": {
+            color: "#3f51b5",
+            fontWeight: 'bold',
+          },
+          "&:hover .MuiListItemIcon-root": {
+            color: "#3f51b5",
+            fontWeight: 'bold',
+          },
+        },
       }
     },
-    MuiListItemIcon: {
-      styleOverrides: {
-        root: {
-          "&:hover": {
-            // backgroundColor: "#6573c3",
-            color: 'white'
-          },
-        }
-      }
-    }
-
   }
 })
 
