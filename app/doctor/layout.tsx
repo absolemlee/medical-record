@@ -59,7 +59,7 @@ const belowItems = [
     url: '/doctor/settings'
   },
   {
-    name: 'Log out',
+    name: 'Logout',
     icon: <LogoutRoundedIcon />,
     url: '/doctor/logout'
   },

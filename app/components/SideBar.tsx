@@ -17,9 +17,6 @@ import ListItemIcon from '@mui/material/ListItemIcon';
 import ListItemText from '@mui/material/ListItemText';
 import SearchField from './SearchField';
 
-import Logout from '@mui/icons-material/Logout';
-import Settings from '@mui/icons-material/Settings';
-
 const drawerWidth = 240
 
 const SideBar = ({ items, belowItems }: { items: any, belowItems: any }) => {
