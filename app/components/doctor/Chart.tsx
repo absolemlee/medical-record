@@ -15,8 +15,8 @@ const Chart = () => {
 
   return (
     <LineChart
-      width={500}
-      height={300}
+      width={450}
+      height={373}
       series={[
         { data: uData, label: 'Patients' },
       ]}
