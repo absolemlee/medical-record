@@ -24,7 +24,8 @@ const theme = createTheme({
           },
           ".MuiTypography-root": {
             fontWeight: '500',
-            color: '#64748B'
+            color: '#64748B',
+            fontSize: 'small'
           },
           ".MuiListItemIcon-root": {
             color: '#64748B'
