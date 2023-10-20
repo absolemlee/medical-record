@@ -86,10 +86,6 @@ empty for now
 #### List of network requests by screen
 
   - Blank for now
-    
-#### [OPTIONAL:] Existing API Endpoints
-##### Spotify API
--  Blank for now
 
    
 
