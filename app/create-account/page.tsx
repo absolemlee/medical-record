@@ -14,12 +14,12 @@ const CreateAccount = () => {
         justifyContents: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        p: 5,
-        mt: 5
+        p: 2,
+        mt: 1
       }}
     >
       <PatientSignUpForm />
-      <DoctorSignUpForm />
+      {/* <DoctorSignUpForm /> */}
     </Container>
   )
 }

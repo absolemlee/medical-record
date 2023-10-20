@@ -36,6 +36,7 @@ const SignupToggle = () => {
       <Menu
         anchorEl={anchorEl}
         open={Boolean(anchorEl)}
+        onClose={handleClose}
       >
         <MenuItem
           onClick={handleClose}
