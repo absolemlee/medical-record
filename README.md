@@ -81,8 +81,6 @@ As a patient, I can
 
 ## Tech Stack
 * Frontend: Next.js, TypeScript, Material UI, Figma
-* Backend: 
-* 
 
 ## Wireframes
 empty for now
