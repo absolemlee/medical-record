@@ -20,6 +20,7 @@ Medical Record web application aids healthcare providers in providing safer and 
 ### 1. User Stories 
 
 **Required Must-have Stories**
+
 As a user, I can
   * [ ] View on a visually pleasing homepage by default
   * [ ] Navigate between tabs (Home, About, Contact) on the navbar
