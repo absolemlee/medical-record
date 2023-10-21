@@ -88,6 +88,10 @@ As a patient, I can
 empty for now
 
 ## Mockups
+![Login](public/Login.png)
+![Patient](public/PatientSignup.png)
+![Reset](public/ResetPassword.png)
+![DoctorDashboard](public/DoctorDashboard.png)
 
 ## Schema 
 ### Models
