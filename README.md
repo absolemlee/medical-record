@@ -5,7 +5,8 @@
 2. [Product Spec](#Product-Spec)
 3. [Tech Stack](#Tech-Stack)
 4. [Wireframes](#Wireframes)
-5. [Schema](#Schema)
+5. [Mockups](#Mockups)
+6. [Schema](#Schema)
 
 ## Overview
 ### Description
@@ -85,6 +86,8 @@ As a patient, I can
 
 ## Wireframes
 empty for now
+
+## Mockups
 
 ## Schema 
 ### Models
