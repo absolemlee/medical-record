@@ -17,14 +17,38 @@ Medical Record web application aids healthcare providers in providing safer and 
 
 ## Product Spec
 
-### 1. User Stories (Required and Optional)
+### 1. User Stories 
 
 **Required Must-have Stories**
+As a user, I can
+  * [ ] View on a visually pleasing homepage by default
+  * [ ] Navigate between tabs (Home, About, Contact) on the navbar
+  * [ ] Log in to my account
+  * [ ] Create account 
 
-* [ ] As a doctor, I can
+As a doctor, I can
+  * [ ] Create account on doctor portal
   * [ ] Log into my account
-  * [ ] View patients
-  * [ ] Upload patients' medical records
+  * [ ] Navigate to tabs listed on sidebar
+  * [ ] Search for information, including patients, appointments, tests and lab results, etc
+  * [ ] View all patients personal and life-saving information
+  * [ ] View all patients' appointments' details 
+  * [ ] Add patients' medical records
+  * [ ] Update patients' medical records
+  * [ ] View details about a single patient
+
+As a patient, I can
+  * [ ] Create account on patient portal
+  * [ ] Log into my account
+  * [ ] Navigate to tabs listed on sidebar
+  * [ ] Search for information, including appointments, medical records, medical bills, etc
+  * [ ] View my personal information
+  * [ ] View information about upcoming appointments
+  * [ ] Set up appointment in available clinics
+  * [ ] View details of each medical bill
+  * [ ] Pay medical bill
+  * [ ] Download clinical findings, diagnostic test and lab results
+  * [ ] Print clinical findings, diagnostic test and lab results
 
 
 **Optional Nice-to-have Stories**
@@ -56,7 +80,9 @@ Medical Record web application aids healthcare providers in providing safer and 
    => Logout
 
 ## Tech Stack
-empty for now 
+* Frontend: Next.js, TypeScript, Material UI, Figma
+* Backend: 
+* 
 
 ## Wireframes
 empty for now
