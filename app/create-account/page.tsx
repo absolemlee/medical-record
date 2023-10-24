@@ -8,17 +8,8 @@ import styles from '../create-account/create-account.module.css'
 
 const CreateAccount = () => {
   return (
-    <Container
-      sx={{
-        display: 'flex',
-        justifyContents: 'center',
-        alignItems: 'center',
-        flexDirection: 'column',
-        p: 2,
-        mt: 1
-      }}
-    >
-      <PatientSignUpForm />
+    <Container>
+      {/* <PatientSignUpForm /> */}
       {/* <DoctorSignUpForm /> */}
     </Container>
   )

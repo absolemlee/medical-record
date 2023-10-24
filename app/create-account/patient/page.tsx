@@ -2,8 +2,7 @@ import React from 'react'
 import { Box, Container, Button, Typography }
   from '@mui/material'
 
-// import PatientSignUpForm from '../components/patient/PatientSignUpForm'
-// import DoctorSignUpForm from '../components/doctor/DoctorSignUpForm'
+import PatientSignUpForm from '../../components/patient/PatientSignUpForm'
 import styles from '../create-account/create-account.module.css'
 
 const CreateAccount = () => {
@@ -14,12 +13,11 @@ const CreateAccount = () => {
         justifyContents: 'center',
         alignItems: 'center',
         flexDirection: 'column',
-        p: 5,
-        mt: 5
+        p: 3,
+        mt: 1
       }}
     >
-      this is patient create account
-      {/* <PatientSignUpForm /> */}
+      <PatientSignUpForm />
     </Container>
   )
 }

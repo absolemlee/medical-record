@@ -25,7 +25,7 @@ const style = {
 const NavBar = () => {
 
   return (
-    <Box sx={{ flexGrow: 1 }}>
+    <Box sx={{ flexGrow: 1, display: 'flex' }}>
       <AppBar position="static" sx={{ background: 'white' }}>
         <Container maxWidth="xl">
           <Toolbar disableGutters>
