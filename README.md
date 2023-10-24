@@ -25,9 +25,7 @@ Medical Record web application aids healthcare providers in providing safer and 
 As a user, I can
   * [ ] View on a visually pleasing homepage by default
   * [ ] Navigate between tabs (Home, About, Contact) on the navbar
-  * [ ] Log in to my account
-  * [ ] Create account 
-
+  
 As a doctor, I can
   * [ ] Create account on doctor portal
   * [ ] Log into my account
