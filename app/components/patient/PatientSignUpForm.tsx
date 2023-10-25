@@ -21,7 +21,7 @@ const genders = [
   'Male',
   'Nonbinary',
   'Other',
-];
+]
 
 const PatientSignUpForm = () => {
   const [gender, setGender] = useState<string>('')
@@ -135,7 +135,7 @@ const PatientSignUpForm = () => {
         </Typography>
         <Button variant="contained" sx={{ margin: "30px 100px 20px" }}>
           <Typography variant="body1" sx={{ textTransform: 'capitalize' }}>
-            Create account
+            Create
           </Typography>
         </Button>
       </Box>
