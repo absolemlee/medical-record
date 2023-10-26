@@ -25,11 +25,40 @@ const genders = [
   'Other',
 ];
 
+// interface Doctor {
+//   firstName: string
+// }
+
 const DoctorSignUpForm = () => {
   const router = useRouter()
 
   const [gender, setGender] = useState<string>('')
   const [open, setOpen] = useState(false);
+  const [doctor, setDoctor] = useState({
+    firstName: '',
+    lastName: '',
+    dob: '', // date type?
+    email: '',
+    phoneNumber: '', // number type
+    gender: '',
+    clinicName: '',
+    clinicAddress: {
+      street: '',
+      city: '',
+      state: '',
+      zip: '' // number type
+    },
+    education: {
+      college: '',
+      certificate: '' // a file?
+    },
+    professional: {
+      licenseNumber: '', // number type 
+      yearsPractice: '', // number type
+      clinics: '', // an array of strings
+    },
+    password: '' // use bcrypt to hash
+  })
 
   const handleChange = (event: SelectChangeEvent<typeof gender>) => {
     setGender(event.target.value)
@@ -187,14 +216,6 @@ const DoctorSignUpForm = () => {
               required
               id="outlined-required"
               label="College"
-              sx={{ mb: 2.5 }}
-              size="small"
-            />
-            <TextField
-              // to-do: make upload functionality
-              required
-              id="outlined-required"
-              label="Certificate"
               sx={{ mb: 2.5 }}
               size="small"
             />
