@@ -1,5 +1,4 @@
 'use client'
-import React from 'react'
 import { useState } from 'react'
 import { useRouter } from 'next/navigation'
 import { Box, Container, Button, Typography } from '@mui/material'
@@ -25,40 +24,50 @@ const genders = [
   'Other',
 ];
 
-// interface Doctor {
-//   firstName: string
-// }
+type UserFormState = {
+  firstName: string,
+  lastName: string
+}
 
 const DoctorSignUpForm = () => {
   const router = useRouter()
 
   const [gender, setGender] = useState<string>('')
   const [open, setOpen] = useState(false);
-  const [doctor, setDoctor] = useState({
+  // const [allValues, setDoctor] = useState({
+  //   firstName: '',
+  //   lastName: '',
+  //   dob: '', // date type?
+  //   email: '',
+  //   phoneNumber: '', // number type
+  //   gender: '',
+  //   clinicName: '',
+  //   clinicAddress: {
+  //     street: '',
+  //     city: '',
+  //     state: '',
+  //     zip: '' // number type
+  //   },
+  //   education: {
+  //     college: '',
+  //     certificate: '' // a file?
+  //   },
+  //   professional: {
+  //     licenseNumber: '', // number type 
+  //     yearsPractice: '', // number type
+  //     clinics: '', // an array of strings
+  //   },
+  //   password: '' // use bcrypt to hash
+  // })
+
+  const [inputs, setInputs]  = useState<UserFormState>({
     firstName: '',
-    lastName: '',
-    dob: '', // date type?
-    email: '',
-    phoneNumber: '', // number type
-    gender: '',
-    clinicName: '',
-    clinicAddress: {
-      street: '',
-      city: '',
-      state: '',
-      zip: '' // number type
-    },
-    education: {
-      college: '',
-      certificate: '' // a file?
-    },
-    professional: {
-      licenseNumber: '', // number type 
-      yearsPractice: '', // number type
-      clinics: '', // an array of strings
-    },
-    password: '' // use bcrypt to hash
+    lastName: ''
   })
+
+  // test if inputs show up
+  console.log('henlooooo',inputs.firstName, inputs.lastName)
+
 
   const handleChange = (event: SelectChangeEvent<typeof gender>) => {
     setGender(event.target.value)
@@ -99,6 +108,8 @@ const DoctorSignUpForm = () => {
             label="First name"
             sx={{ mb: 2.5 }}
             size="small"
+            value={inputs.firstName}
+            onChange={e => setInputs({...inputs, firstName: e.target.value})}
           />
           <TextField
             required
@@ -106,8 +117,10 @@ const DoctorSignUpForm = () => {
             label="Last name"
             sx={{ mb: 2.5 }}
             size="small"
+            value={inputs.lastName}
+            onChange={e => setInputs({...inputs, lastName: e.target.value})}
           />
-          <LocalizationProvider dateAdapter={AdapterDayjs}>
+          {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DatePicker
               // value={value}
               // onChange={(newValue) => setValue(newValue)}
@@ -116,7 +129,7 @@ const DoctorSignUpForm = () => {
               slotProps={{ textField: { fullWidth: true, size: 'small', required: true } }}
               sx={{ mb: 2.5 }}
             />
-          </LocalizationProvider>
+          </LocalizationProvider> */}
         </Box>
         {/* <Box>
           <LocalizationProvider dateAdapter={AdapterDayjs}>
@@ -144,7 +157,7 @@ const DoctorSignUpForm = () => {
           sx={{ mb: 2.5 }}
           size="small"
         />
-        <Box>
+        {/* <Box>
           <FormControl fullWidth size="small" sx={{ mb: 2.5 }}>
             <InputLabel id="demo-multiple-name-label">Gender</InputLabel>
             <Select
@@ -168,8 +181,8 @@ const DoctorSignUpForm = () => {
               ))}
             </Select>
           </FormControl>
-        </Box>
-        <TextField
+        </Box> */}
+        {/* <TextField
           required
           id="outlined-required"
           label="Current clinic name"
@@ -208,8 +221,8 @@ const DoctorSignUpForm = () => {
             sx={{ mb: 2.5 }}
             size="small"
           />
-        </Box>
-        <Box>
+        </Box> */}
+        {/* <Box>
           <Typography>Education profile</Typography>
           <Box>
             <TextField
@@ -248,7 +261,7 @@ const DoctorSignUpForm = () => {
               size="small"
             />
           </Box>
-        </Box>
+        </Box> */}
         <TextField
           required
           id="outlined-required"
