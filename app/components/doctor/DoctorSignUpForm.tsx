@@ -60,15 +60,33 @@ const DoctorSignUpForm = () => {
   //   password: '' // use bcrypt to hash
   // })
 
-  const [inputs, setInputs]  = useState<UserFormState>({
+  const [inputs, setInputs] = useState<UserFormState>({
     firstName: '',
     lastName: ''
   })
 
+  const handleInput = (e) => {
+    const fieldName = e.target.name
+    const fieldValue = e.target.value
+
+    setInputs((prev) => ({
+      ...prev,
+      [fieldName]: fieldValue      
+    }))
+  }
+
+  // handle submit handler
+  const handleSubmit = (e) => {
+    e.preventDefault()
+    // todo: send data to the server
+  }
+
   // test if inputs show up
-  console.log('henlooooo',inputs.firstName, inputs.lastName)
+  console.log('henlooooo', inputs.firstName)
+  
 
 
+  // handlers for gender selection
   const handleChange = (event: SelectChangeEvent<typeof gender>) => {
     setGender(event.target.value)
   }
@@ -80,6 +98,8 @@ const DoctorSignUpForm = () => {
   const handleOpen = () => {
     setOpen(true)
   }
+
+  
 
   return (
     <Container style={{ padding: '0 350px' }}>
@@ -95,13 +115,14 @@ const DoctorSignUpForm = () => {
         </Typography>
       </Box>
       <Box
+        // onSubmit={handleSubmit}
         component="form"
         noValidate
         autoComplete="off"
         sx={{ display: 'flex', flexDirection: 'column' }}
       >
         <Box sx={{ display: 'flex', columnGap: '15px' }}>
-          
+
           <TextField
             required
             id="outlined-required"
@@ -109,17 +130,18 @@ const DoctorSignUpForm = () => {
             sx={{ mb: 2.5 }}
             size="small"
             value={inputs.firstName}
-            onChange={e => setInputs({...inputs, firstName: e.target.value})}
+            name="firstName"
+            onChange={handleInput}
           />
-          <TextField
+          {/* <TextField
             required
             id="outlined-required"
             label="Last name"
             sx={{ mb: 2.5 }}
             size="small"
             value={inputs.lastName}
-            onChange={e => setInputs({...inputs, lastName: e.target.value})}
-          />
+            onChange={e => setInputs({ ...inputs, lastName: e.target.value })}
+          /> */}
           {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DatePicker
               // value={value}
@@ -143,7 +165,7 @@ const DoctorSignUpForm = () => {
             />
           </LocalizationProvider>
         </Box> */}
-        <TextField
+        {/* <TextField
           required
           id="outlined-required"
           label="Email"
@@ -156,7 +178,7 @@ const DoctorSignUpForm = () => {
           label="Phone number"
           sx={{ mb: 2.5 }}
           size="small"
-        />
+        /> */}
         {/* <Box>
           <FormControl fullWidth size="small" sx={{ mb: 2.5 }}>
             <InputLabel id="demo-multiple-name-label">Gender</InputLabel>
@@ -276,7 +298,7 @@ const DoctorSignUpForm = () => {
         </Typography>
         <Button variant="contained" sx={{ margin: "30px 100px 20px" }}>
           <Typography variant="body1" sx={{ textTransform: 'capitalize' }}>
-            Create 
+            Create
           </Typography>
         </Button>
       </Box>
