@@ -84,7 +84,7 @@ const DoctorSignUpForm = () => {
     console.log('first name', inputs.firstName)
     let firstName = inputs.firstName
 
-    const res = await fetch("api/contact", {
+    const res = await fetch("api/topics", {
       method: 'POST',
       headers: {
         "Content-type": "application/json"
