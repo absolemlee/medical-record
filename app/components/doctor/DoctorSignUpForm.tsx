@@ -65,6 +65,8 @@ const DoctorSignUpForm = () => {
     lastName: ''
   })
 
+  const [error, setError] = useState([])
+
   const handleInput = (e) => {
     const fieldName = e.target.name
     const fieldValue = e.target.value
@@ -76,9 +78,25 @@ const DoctorSignUpForm = () => {
   }
 
   // handle submit handler
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     // todo: send data to the server
+    console.log('first name', inputs.firstName)
+    let firstName = inputs.firstName
+
+    const res = await fetch("api/contact", {
+      method: 'POST',
+      headers: {
+        "Content-type": "application/json"
+      },
+      body: JSON.stringify({
+        firstName
+      })
+    }) 
+
+    const {msg} = await res.json()
+    setError(msg)
+    console.log(error)
   }
 
   // test if inputs show up
@@ -296,7 +314,7 @@ const DoctorSignUpForm = () => {
           Your password must be a combination of numbers and English letters or symbols,
           including at least 8 characters
         </Typography>
-        <Button variant="contained" sx={{ margin: "30px 100px 20px" }}>
+        <Button onSubmit={handleSubmit} variant="contained" sx={{ margin: "30px 100px 20px" }}>
           <Typography variant="body1" sx={{ textTransform: 'capitalize' }}>
             Create
           </Typography>
