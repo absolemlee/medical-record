@@ -14,75 +14,49 @@ import Link from 'next/link'
 
 type FormValues = {
   email: string
-  // password: string
-}
-
-const resolver: Resolver<FormValues> = async (values) => {
-  return {
-    values: values.email ? values : {},
-    errors: !values.email
-      ? {
-        email: {
-          type: 'required',
-          message: 'Email is required'
-        }
-      }
-      : {}
-  }
+  password: string
 }
 
 const LoginForm = () => {
-  const { register, handleSubmit, formState: { errors } } = useForm<FormValues>({ resolver })
+  const { register, handleSubmit } = useForm<FormValues>()
 
-  const onSubmit = handleSubmit((data) => console.log(data))
-  
-  // const fields = {
-  //   username: register('username', { required: 'Username is required' }),
-  //   password: register('password', { required: 'Password is required' })
-  // };
+  const onSubmit = handleSubmit((data) => console.log('henlo', data))
 
   return (
     <Container style={{ padding: '0 350px' }}>
-      {/* <Box
-        component="form"
-        noValidate
-        autoComplete="off"
-        sx={{ display: 'flex', flexDirection: 'column' }}
-      > */}
-        <form onSubmit={onSubmit}>
-          <input {...register("email")} placeholder="Jane" />
-          {errors?.email && <p>{errors.email.message}</p>}
-          <input type="submit" />
-        </form>
-        {/* <TextField
-          required
-          id="outlined-required"
-          label="Email"
-          placeholder='Enter your email'
-          sx={{ mb: 2.5 }}
-          size="small"
-        />
-        <TextField
-          required
-          id="outlined-required"
-          label="Password"
-          type="password"
-          placeholder='Set your password'
-          sx={{ marginBottom: '10px' }}
-          size="small"
-        /> */}
-        {/* <FormGroup>
-          <FormControlLabel
-            control={<Checkbox />}
-            label="Remember me"
+      <form onSubmit={onSubmit}>
+        <Box sx={{ display: 'flex', flexDirection: 'column' }}>
+          <TextField
+            required
+            label="Email"
+            placeholder='Enter your email'
+            sx={{ mb: 2.5 }}
+            size="small"
+            type="email"
+            {...register("email")}
           />
-        </FormGroup>
-        <Button variant="contained" sx={{ margin: "30px 100px 20px" }}>
-          <Typography variant="body1" sx={{ textTransform: 'capitalize' }}>
-            Sign in
-          </Typography>
-        </Button>
-      </Box>
+          <TextField
+            required
+            label="Password"
+            type="password"
+            placeholder='Set your password'
+            sx={{ marginBottom: '10px' }}
+            size="small"
+            {...register("password")}
+          />
+          <FormGroup>
+            <FormControlLabel
+              control={<Checkbox />}
+              label="Remember me"
+            />
+          </FormGroup>
+          <Button type="submit" variant="contained" sx={{ margin: "30px 100px 20px" }}>
+            <Typography variant="body1" sx={{ textTransform: 'capitalize' }}>
+              Sign in
+            </Typography>
+          </Button>
+        </Box>
+      </form>
       <Box sx={{ display: 'flex', justifyContent: 'space-between' }}>
         <Typography variant="body2">
           <Link href="/reset-password" className={styles.loginLink}>
@@ -95,9 +69,29 @@ const LoginForm = () => {
             Create account
           </Link>
         </Typography>
-      </Box> */}
+      </Box>
     </Container>
   )
 }
 
 export default LoginForm
+
+// const resolver: Resolver<FormValues> = async (values) => {
+//   return {
+//     values: values.email ? values : {},
+//     errors: !values.email
+//       ? {
+//         email: {
+//           type: 'required',
+//           message: 'Email is required'
+//         }
+//       }
+//       : {}
+//   }
+// }
+
+/*
+<input {...register("email")} placeholder="Jane" />
+{errors?.email && <p>{errors.email.message}</p>}
+<input type="submit" />
+*/
