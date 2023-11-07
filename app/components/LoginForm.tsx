@@ -9,18 +9,52 @@ import FormControlLabel from '@mui/material/FormControlLabel'
 import Checkbox from '@mui/material/Checkbox'
 import Button from '@mui/material/Button'
 
+import { useForm, Resolver } from "react-hook-form"
 import Link from 'next/link'
 
+type FormValues = {
+  email: string
+  // password: string
+}
+
+const resolver: Resolver<FormValues> = async (values) => {
+  return {
+    values: values.email ? values : {},
+    errors: !values.email
+      ? {
+        email: {
+          type: 'required',
+          message: 'Email is required'
+        }
+      }
+      : {}
+  }
+}
+
 const LoginForm = () => {
+  const { register, handleSubmit, formState: { errors } } = useForm<FormValues>({ resolver })
+
+  const onSubmit = handleSubmit((data) => console.log(data))
+  
+  // const fields = {
+  //   username: register('username', { required: 'Username is required' }),
+  //   password: register('password', { required: 'Password is required' })
+  // };
+
   return (
     <Container style={{ padding: '0 350px' }}>
-      <Box
+      {/* <Box
         component="form"
         noValidate
         autoComplete="off"
         sx={{ display: 'flex', flexDirection: 'column' }}
-      >
-        <TextField
+      > */}
+        <form onSubmit={onSubmit}>
+          <input {...register("email")} placeholder="Jane" />
+          {errors?.email && <p>{errors.email.message}</p>}
+          <input type="submit" />
+        </form>
+        {/* <TextField
           required
           id="outlined-required"
           label="Email"
@@ -36,8 +70,8 @@ const LoginForm = () => {
           placeholder='Set your password'
           sx={{ marginBottom: '10px' }}
           size="small"
-        />
-        <FormGroup>
+        /> */}
+        {/* <FormGroup>
           <FormControlLabel
             control={<Checkbox />}
             label="Remember me"
@@ -61,7 +95,7 @@ const LoginForm = () => {
             Create account
           </Link>
         </Typography>
-      </Box>
+      </Box> */}
     </Container>
   )
 }
