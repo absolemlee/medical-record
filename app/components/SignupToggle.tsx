@@ -43,14 +43,14 @@ const SignupToggle = () => {
           component={Link}
           href='/create-account/patient'
         >
-          Patient sign up
+          Patient
         </MenuItem>
         <MenuItem
           onClick={handleClose}
           component={Link}
           href='/create-account/doctor'
         >
-          Doctor sign up
+          Doctor
         </MenuItem>
       </Menu>
     </>

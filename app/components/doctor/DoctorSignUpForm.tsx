@@ -73,7 +73,7 @@ const DoctorSignUpForm = () => {
 
     setInputs((prev) => ({
       ...prev,
-      [fieldName]: fieldValue      
+      [fieldName]: fieldValue
     }))
   }
 
@@ -92,16 +92,16 @@ const DoctorSignUpForm = () => {
       body: JSON.stringify({
         firstName
       })
-    }) 
+    })
 
-    const {msg} = await res.json()
+    const { msg } = await res.json()
     setError(msg)
     console.log(error)
   }
 
   // test if inputs show up
   console.log('henlooooo', inputs.firstName)
-  
+
 
 
   // handlers for gender selection
@@ -117,7 +117,7 @@ const DoctorSignUpForm = () => {
     setOpen(true)
   }
 
-  
+
 
   return (
     <Container style={{ padding: '0 350px' }}>
@@ -151,27 +151,17 @@ const DoctorSignUpForm = () => {
             name="firstName"
             onChange={handleInput}
           />
-          {/* <TextField
+          <TextField
             required
             id="outlined-required"
             label="Last name"
             sx={{ mb: 2.5 }}
             size="small"
             value={inputs.lastName}
-            onChange={e => setInputs({ ...inputs, lastName: e.target.value })}
-          /> */}
-          {/* <LocalizationProvider dateAdapter={AdapterDayjs}>
-            <DatePicker
-              // value={value}
-              // onChange={(newValue) => setValue(newValue)}
-              defaultValue={dayjs(new Date())}
-              label="Date of birth"
-              slotProps={{ textField: { fullWidth: true, size: 'small', required: true } }}
-              sx={{ mb: 2.5 }}
-            />
-          </LocalizationProvider> */}
+            onChange={handleInput}
+          />
         </Box>
-        {/* <Box>
+        <Box>
           <LocalizationProvider dateAdapter={AdapterDayjs}>
             <DatePicker
               // value={value}
@@ -182,8 +172,8 @@ const DoctorSignUpForm = () => {
               sx={{ mb: 2.5 }}
             />
           </LocalizationProvider>
-        </Box> */}
-        {/* <TextField
+        </Box>
+        <TextField
           required
           id="outlined-required"
           label="Email"
@@ -196,8 +186,8 @@ const DoctorSignUpForm = () => {
           label="Phone number"
           sx={{ mb: 2.5 }}
           size="small"
-        /> */}
-        {/* <Box>
+        />
+        <Box>
           <FormControl fullWidth size="small" sx={{ mb: 2.5 }}>
             <InputLabel id="demo-multiple-name-label">Gender</InputLabel>
             <Select
@@ -221,8 +211,8 @@ const DoctorSignUpForm = () => {
               ))}
             </Select>
           </FormControl>
-        </Box> */}
-        {/* <TextField
+        </Box>
+        <TextField
           required
           id="outlined-required"
           label="Current clinic name"
@@ -230,15 +220,16 @@ const DoctorSignUpForm = () => {
           size="small"
         />
         <Box>
-          <Typography>Current Clinic Address</Typography>
+          <Typography sx={{ fontWeight: 700, mb: 1 }}>Current Clinic Address</Typography>
           <TextField
             required
             id="outlined-required"
             label="Street Address"
             sx={{ mb: 2.5 }}
             size="small"
+            fullWidth
           />
-          <Box>
+          <Box sx={{ display: 'flex', columnGap: '15px' }}>
             <TextField
               required
               id="outlined-required"
@@ -260,10 +251,11 @@ const DoctorSignUpForm = () => {
             label="Postal/Zip code"
             sx={{ mb: 2.5 }}
             size="small"
+            fullWidth
           />
-        </Box> */}
-        {/* <Box>
-          <Typography>Education profile</Typography>
+        </Box>
+        <Box>
+          <Typography sx={{ fontWeight: 700, mb: 1 }}>Education</Typography>
           <Box>
             <TextField
               required
@@ -271,37 +263,42 @@ const DoctorSignUpForm = () => {
               label="College"
               sx={{ mb: 2.5 }}
               size="small"
+              fullWidth
             />
           </Box>
         </Box>
         <Box>
-          <Typography>Professional profile</Typography>
+          <Typography sx={{ fontWeight: 700, mb: 1 }}>Professional profile</Typography>
           <Box>
-            <TextField
-              // to-do: 6 digit license number
-              // digit only 
-              required
-              id="outlined-required"
-              label="License Number"
-              sx={{ mb: 2.5 }}
-              size="small"
-            />
-            <TextField
-              required
-              id="outlined-required"
-              label="Years of clinical experience"
-              sx={{ mb: 2.5 }}
-              size="small"
-            />
+            <Box sx={{ display: 'flex', columnGap: '15px' }}>
+              <TextField
+                // to-do: 6 digit license number
+                // digit only 
+                required
+                id="outlined-required"
+                label="License Number"
+                sx={{ mb: 2.5 }}
+                size="small"
+              />
+              <TextField
+                // digit only 
+                required
+                id="outlined-required"
+                label="Years of clinical experience"
+                sx={{ mb: 2.5 }}
+                size="small"
+              />
+            </Box>
             <TextField
               required
               id="outlined-required"
               label="Which clinics have you worked before? Please list them all"
               sx={{ mb: 2.5 }}
               size="small"
+              fullWidth
             />
           </Box>
-        </Box> */}
+        </Box>
         <TextField
           required
           id="outlined-required"
