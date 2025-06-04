@@ -50,7 +50,7 @@ const SideBar = ({ items, belowItems }: { items: any, belowItems: any }) => {
       >
         <Toolbar>
           <Typography variant="h5">
-            Medical Record
+            Holistic Care Record
           </Typography>
         </Toolbar>
         <Divider />

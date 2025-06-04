@@ -50,7 +50,7 @@ const SignupToggle = () => {
           component={Link}
           href='/create-account/doctor'
         >
-          Doctor
+          Provider
         </MenuItem>
       </Menu>
     </>

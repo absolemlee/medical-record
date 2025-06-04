@@ -31,7 +31,7 @@ const items = [
     url: '/doctor'
   },
   {
-    name: 'Patients',
+    name: 'Participants',
     icon: <PeopleAltRoundedIcon />,
     url: '/doctor/patients'
   },

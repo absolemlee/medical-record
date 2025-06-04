@@ -32,7 +32,7 @@ const NavBar = () => {
             <Box sx={{ flexGrow: 1, display: 'flex' }}>
               <Link href="/" style={style.tab}>
                 <Typography variant="h5" component="div" sx={{ flexGrow: 0, color: '#2c387e' }}>
-                  Medical Record
+                  Spiritual Care Record
                 </Typography>
               </Link>
               <Box sx={{ flexGrow: 1, display: 'flex', ml: 10 }}>
