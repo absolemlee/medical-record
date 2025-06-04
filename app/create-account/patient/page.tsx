@@ -3,7 +3,7 @@ import { Box, Container, Button, Typography }
   from '@mui/material'
 
 import PatientSignUpForm from '../../components/patient/PatientSignUpForm'
-import styles from '../create-account/create-account.module.css'
+import styles from '../create-account.module.css'
 
 const CreateAccount = () => {
   return (

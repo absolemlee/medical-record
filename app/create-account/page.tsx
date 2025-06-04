@@ -4,7 +4,7 @@ import { Box, Container, Button, Typography }
 
 import PatientSignUpForm from '../components/patient/PatientSignUpForm'
 import DoctorSignUpForm from '../components/doctor/DoctorSignUpForm'
-import styles from '../create-account/create-account.module.css'
+import styles from '../create-account.module.css'
 
 const CreateAccount = () => {
   return (
