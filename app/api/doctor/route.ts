@@ -6,5 +6,5 @@ export async function POST (request) {
   const {name, species} = await request.json()
   await dbConnect()
   await Doctor.create({name, species})
-  return NextResponse.json({msg: 'doctor created'}, {status: 201})
+  return NextResponse.json({msg: 'provider created'}, {status: 201})
 }
