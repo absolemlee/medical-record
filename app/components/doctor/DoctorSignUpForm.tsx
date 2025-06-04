@@ -151,7 +151,7 @@ const DoctorSignUpForm = () => {
     setError('')
     // Send data to the server
     try {
-      const res = await fetch("/api/doctor-signup", {
+      const res = await fetch("/api/doctor", {
         method: 'POST',
         headers: {
           "Content-type": "application/json"
